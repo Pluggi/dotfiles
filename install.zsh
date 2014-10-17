@@ -17,7 +17,7 @@ do
     then
         mkdir -p "$backup"
         echo "$new alreay exists. Moving it to $backup"
-        mv "$(realpath -f $new)" "$backup"
+        mv "$(realpath $new)" "$backup"
     fi
     ln -vs "$PWD/$f" "$new"
 done
