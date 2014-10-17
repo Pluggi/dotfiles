@@ -1,3 +1,9 @@
+# Load every configuration files in ~/.zsh
+for f in ~/.zsh/*; do source $f; done
+
+# Environment variables
+export EDITOR=vim
+
 autoload -U colors
 colors
 
@@ -20,6 +26,14 @@ zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' menu select=1
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 
+setopt extendedglob
+# `correct' turns on spelling correction for all commands
+setopt correct
+# `correctall' turns on spelling correction for all arguments
+setopt correctall
+
+# History
+
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -34,14 +48,3 @@ setopt histignorespace
 
 # `noclobber' prevents you from accidentally overwriting an existing file
 setopt noclobber
-
-setopt extendedglob
-# `correct' turns on spelling correction for all commands
-setopt correct
-# `correctall' turns on spelling correction for all arguments
-setopt correctall
-
-# Load every configuration files in ~/.zsh
-for f in ~/.zsh/*; do source $f; done
-
-EDITOR="vim"
