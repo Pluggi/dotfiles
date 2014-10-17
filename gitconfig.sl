@@ -3,7 +3,7 @@
     name = Pluggi
 
 [color]
-    ui = true
+    ui = always
 
 [core]
     excludesfile = ~/.gitignore
