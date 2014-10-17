@@ -16,7 +16,25 @@ compinit
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+
+# `histignoredups' prevents the current line from being saved in the history if
+# it is the same as the previous one
+setopt histignoredups
+
+# `histignorespace' prevents the current line from being saved if it begins
+# with a space
+setopt histignorespace
+
+# `noclobber' prevents you from accidentally overwriting an existing file
+setopt noclobber
+
 setopt extendedglob
+# `correct' turns on spelling correction for all commands
+setopt correct
+# `correctall' turns on spelling correction for all arguments
+setopt correctall
 
 # Load every configuration files in ~/.zsh
 for f in ~/.zsh/*; do source $f; done
+
+EDITOR="vim"
