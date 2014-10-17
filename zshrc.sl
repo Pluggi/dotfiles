@@ -3,6 +3,7 @@ for f in ~/.zsh/*; do source $f; done
 
 # Environment variables
 export EDITOR=vim
+export PATH=~/.bin:$PATH
 
 autoload -U colors
 colors
