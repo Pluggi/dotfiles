@@ -89,6 +89,7 @@ set t_vb=
 " Color the column after textwidth, usually the 80th
 if version >= 703
   set colorcolumn=+1
+  hi ColorColumn ctermfg=NONE cterm=bold term=bold ctermbg=235
 endif
 
 " Display whitespace characters
@@ -120,6 +121,8 @@ set completeopt=menu,longest
 
 " Highlight current line
 set cursorline
+hi CursorLine ctermfg=NONE cterm=bold term=bold ctermbg=235
+hi CursorLineNr ctermfg=NONE cterm=bold term=bold ctermbg=235
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Search options
