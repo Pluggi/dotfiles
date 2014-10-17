@@ -208,6 +208,10 @@ noremap <leader>cw :botright :cw<cr>
 " no more errors
 noremap <leader>m :silent! :make \| :redraw! \| :botright :cw<cr>
 
+" Highlight trailing spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Persistence options
 """"""""""""""""""""""""""""""""""""""""""""""""""
