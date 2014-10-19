@@ -8,10 +8,10 @@ export PATH=~/.bin:$PATH
 autoload -U colors
 colors
 
+source ~/.zsh/git.zsh
 if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="yellow"; fi
-
 PROMPT="%{$fg[$NCOLOR]%}%~ ➤ %{$reset_color%}"
-RPROMPT="%{$fg[$NCOLOR]%}%p %D{%d %b %H:%M}%{$reset_color%}"
+RPROMPT='$(git_super_status)%{$fg[$NCOLOR]%}%p %D{%H:%M}%{$reset_color%}'
 
 # See http://geoff.greer.fm/lscolors/
 export LSCOLORS="exfxcxdxbxbxbxbxbxbxbx"
