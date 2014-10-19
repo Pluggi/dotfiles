@@ -1,5 +1,5 @@
 # Load every configuration files in ~/.zsh
-for f in ~/.zsh/*; do source $f; done
+for f in ~/.zsh/*.zsh; do source $f; done
 
 # Environment variables
 export EDITOR=vim
