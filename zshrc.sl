@@ -3,7 +3,7 @@ for f in ~/.zsh/*.zsh; do source $f; done
 
 # Environment variables
 export EDITOR=vim
-export PATH=~/.bin:$PATH
+export PATH=~/.cabal/bin:~/.bin:$PATH
 
 autoload -U colors
 colors
