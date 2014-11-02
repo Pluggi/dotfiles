@@ -20,13 +20,28 @@ set $w4 4 mail
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+font pango:Terminus 11px
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, its unicode glyph coverage is limited, the old
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
+
+# Colors
+
+# class                        border     backgr.    text
+## LIME GREEN ACTIVE BORDER
+#client.focused                #9fbc00    #9fbc00    #111111
+## BLUE ACTIVE BORDER
+#client.focused                #2b6cc4    #2b6cc4    #111111
+## RED ACTIVE BORDER
+#client.focused                #bf3f34    #bf3f34    #111111
+## LIGHTER RED ACTIVE BORDER
+client.focused                 #cc5555    #cc5555    #111111
+client.unfocused               #444444    #444444    #315858
+client.focused_inactive        #444444    #444444    #2c2c2f
+client.urgent                  #383a3b    #383a3b    #ee0000
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -163,4 +178,14 @@ mode "resize" {
 # finds out, if available)
 bar {
         status_command i3status
+        font pango:Terminus 11px
+        colors {
+            statusline         #999999
+            background         #252525
+            # class            border     backgrd    text
+            focused_workspace  #292929    #292929    #cccccc
+            active_workspace   #252525    #252525    #696f89
+            inactive_workspace #252525    #252525    #6b6b6b
+            urgent_workspace   #252525    #252525    #c7a551
+   }
 }
