@@ -126,8 +126,9 @@ bindsym $mod+underscore workspace 8
 bindsym $mod+ccedilla workspace 9
 bindsym $mod+agrave workspace 10
 
-assign [class="Firefox"] 1 www
-assign [class="Hexchat"] 2 irc
+assign [class="Firefox"] $w1
+assign [class="Hexchat"] $w2
+assign [class="Mail"] $w4
 
 # move focused container to workspace
 bindsym $mod+Shift+ampersand move container to workspace $w1

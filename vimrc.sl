@@ -36,9 +36,6 @@ set nobackup
 " comes to mind)
 set encoding=utf-8
 
-" Disable swapfiles too
-set noswapfile
-
 " Hide buffers instead of closing them
 set hidden
 
@@ -89,7 +86,7 @@ set t_vb=
 " Color the column after textwidth, usually the 80th
 if version >= 703
   set colorcolumn=+1
-  hi ColorColumn ctermfg=NONE cterm=bold term=bold ctermbg=235
+  hi ColorColumn ctermfg=NONE ctermbg=235
 endif
 
 " Display whitespace characters
@@ -242,3 +239,9 @@ if version >= 703
     set undodir=~/.vimtmp/undo
     silent !mkdir -p ~/.vimtmp/undo
 endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Persistence options
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+execute pathogen#infect()
