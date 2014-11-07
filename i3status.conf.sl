@@ -9,10 +9,12 @@
 general {
         colors = true
         interval = 1
+        color_good = '#568081'
+        color_degraded = '#b58900'
+        color_bad = '#B14D4C'
 }
 
 order += "disk /"
-order += "run_watch DHCP"
 order += "wireless wlp2s0"
 order += "ethernet enp3s0f1"
 order += "battery 0"
@@ -20,7 +22,7 @@ order += "load"
 order += "tztime local"
 
 wireless wlp2s0 {
-        format_up = "W: (%quality at %essid) %ip"
+        format_up = "W: (%quality %essid) %ip"
         format_down = "W: down"
 }
 
@@ -34,12 +36,8 @@ battery 0 {
         format = "%status %percentage %remaining"
 }
 
-run_watch DHCP {
-        pidfile = "/var/run/dhclient*.pid"
-}
-
 tztime local {
-        format = "%A %B %T"
+        format = "%a %d %b %T"
 }
 
 load {
