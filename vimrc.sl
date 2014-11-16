@@ -241,7 +241,13 @@ if version >= 703
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" Persistence options
+" Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
-execute pathogen#infect()
+if filereadable(expand("~/.vim/autoload/pathogen.vim"))
+    runtime! autoload/pathogen.vim
+    if exists("g: loaded_pathogen")
+        execute pathogen#infect()
+    endif
+endif
+
