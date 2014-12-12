@@ -13,7 +13,7 @@ do
     new="$HOME/.${f/.sl/}"
     if [[ -e "$new" ]]
     then
-        echo "$new alreay exists. Remove it."
+        echo "$new alreay exists. Removing it..."
         rm -rf "$new"
     fi
     ln -vs "$PWD/$f" "$new"
