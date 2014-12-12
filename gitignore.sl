@@ -17,3 +17,7 @@ Session.vim
 # Python
  __pycache__/
 *.py[cod]
+
+# OCaml
+_build
+*.native
