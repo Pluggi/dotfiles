@@ -68,7 +68,7 @@ bindsym $mod+r exec dmenu_run
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+i focus up
-bindsym $mod+l focus right
+bindsym $mod+o focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -141,6 +141,9 @@ bindsym $mod+Shift+egrave move container to workspace 7
 bindsym $mod+Shift+underscore move container to workspace 8
 bindsym $mod+Shift+ccedilla move container to workspace 9
 bindsym $mod+Shift+agrave move container to workspace 10
+
+# lock screen
+bindsym $mod+l exec "i3lock"
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
