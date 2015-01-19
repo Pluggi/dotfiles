@@ -12,7 +12,7 @@
     st = status
     ph = push
     pl = pull
-    cm = commit -m
+    cm = commit
     d  = diff
     dc = diff --cached
 
