@@ -61,7 +61,7 @@ set showmode
 set showcmd
 
 " Show line numbers relatively to the current one
-set relativenumber
+" set relativenumber
 
 " Show line number
 set number
