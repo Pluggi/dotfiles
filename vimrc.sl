@@ -70,8 +70,25 @@ set number
 set laststatus=2
 
 " Format the status line
-" This status line comes from Pierre Bourdon's vimrc
-set statusline=%f\ %l\|%c\ %m%=%p%%\ (%Y%R)
+function! HighlightSearch()
+  if &hls
+    return 'H'
+  else
+    return ''
+  endif
+endfunction
+
+set statusline=
+set statusline+=[%n]                                   "buffernr
+set statusline+=\ %<%F\                                "File+path
+set statusline+=\ %y\                                  "FileType
+set statusline+=\ %{''.(&fenc!=''?&fenc:&enc).''}      "Encoding
+set statusline+=\ %{(&bomb?\",BOM\":\"\")}\            "Encoding2
+set statusline+=\ %{&ff}\                              "FileFormat (dos/unix..)
+set statusline+=\ %{&spelllang}\%{HighlightSearch()}\  "Spellanguage & Highlight on?
+set statusline+=\ %=\ row:%l/%L\ \ col:%03c            "Rownumber/total Colnr
+set statusline+=\ (%03p%%)\                            "(%)
+set statusline+=\ \ %m%r%w\ %P\ \                      "Modified? Readonly? Top/bot.
 
 " Enhance command line completion
 set wildmenu
