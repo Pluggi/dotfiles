@@ -129,6 +129,7 @@ bindsym $mod+agrave workspace 10
 assign [class="Firefox"] $w1
 assign [class="Hexchat"] $w2
 assign [class="Thunderbird"] $w4
+assign [instance="skype"] $w4
 
 # move focused container to workspace
 bindsym $mod+Shift+ampersand move container to workspace $w1
