@@ -1,5 +1,6 @@
 #! /bin/zsh
 
+autoload colors && colors
 setopt extendedglob
 setopt glob_dots
 
@@ -13,8 +14,9 @@ do
     new="$HOME/.${f/.sl/}"
     if [[ -e "$new" ]]
     then
-        echo "$new alreay exists. Removing it..."
+        echo "$fg[red]Replacing $new…$reset_color"
         rm -rf "$new"
     fi
-    ln -vs "$PWD/$f" "$new"
+    ln -s "$PWD/$f" "$new" &&
+        echo "$fg[green]Linked $new to $PWD/$f$reset_color\n"
 done
