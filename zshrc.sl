@@ -134,3 +134,6 @@ setopt histignorespace
 
 # `noclobber' prevents you from accidentally overwriting an existing file
 setopt noclobber
+
+# Make ^W break on those chars
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
