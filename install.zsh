@@ -20,3 +20,20 @@ do
     fi
     ln -s "$f" "$new" && echo "$fg[green]Linked $new to $f$reset_color\n"
 done
+
+vundle="~/.vim/bundle/Vundle.vim"
+
+if [ ! -d "${vundle}" ]; then
+    echo -n "Install vundle ? "
+    read -rs -k 1 ans
+    case "${ans}" in
+        y|Y|$'\n')
+            echo
+            git clone https://github.com/VundleVim/Vundle.vim.git "${vundle}"
+            vim +PluginInstall +qall
+        ;;
+        *)
+            echo "Vundle won't be installed"
+        ;;
+    esac
+fi
