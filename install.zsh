@@ -21,7 +21,7 @@ do
     ln -s "$f" "$new" && echo "$fg[green]Linked $new to $f$reset_color\n"
 done
 
-vundle="~/.vim/bundle/Vundle.vim"
+vundle="${HOME%/}/.vim/bundle/Vundle.vim"
 
 if [ ! -d "${vundle}" ]; then
     echo -n "Install vundle ? "
