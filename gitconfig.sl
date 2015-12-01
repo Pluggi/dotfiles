@@ -15,3 +15,5 @@
     cm = commit
     d  = diff
     dc = diff --cached
+[push]
+	default = simple
