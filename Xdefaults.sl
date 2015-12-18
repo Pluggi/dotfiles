@@ -42,7 +42,6 @@ URxvt*font: xft:Terminus:8
 URxvt*scrollBar:                        false
 URxvt*scrollTtyKeypress:                true
 URxvt*urgentOnBell:                     true
-URxvt*visualBell:                       true
 URxvt*mouseWheelScrollPage:             true
 URxvt*cursorBlink:                      true
 URxvt*internalBorder:                   3
