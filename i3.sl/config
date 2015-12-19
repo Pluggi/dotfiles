@@ -12,8 +12,8 @@
 set $mod Mod4
 
 set $w1 1 www
-set $w2 2 irc
-set $w3 3 code
+set $w2 2 code
+set $w3 3 irc
 set $w4 4 mail
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -47,7 +47,7 @@ client.urgent                  #383a3b    #383a3b    #ee0000
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+F4 kill
@@ -56,6 +56,10 @@ bindsym $mod+F4 kill
 bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up
 bindsym XF86AudioLowerVolume exec pulseaudio-ctl down
 bindsym XF86AudioMute exec pulseaudio-ctl mute
+
+# control brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -127,7 +131,7 @@ bindsym $mod+ccedilla workspace 9
 bindsym $mod+agrave workspace 10
 
 assign [class="Firefox"] $w1
-assign [class="Hexchat"] $w2
+assign [class="Hexchat"] $w3
 assign [class="Thunderbird"] $w4
 assign [instance="skype"] $w4
 for_window [class="^.*"] border pixel 1
