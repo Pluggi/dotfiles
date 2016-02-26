@@ -45,10 +45,10 @@ URxvt*urgentOnBell:                     true
 URxvt*mouseWheelScrollPage:             true
 URxvt*cursorBlink:                      true
 URxvt*internalBorder:                   3
-URxvt*tab-bg:                           2
-URxvt*tab-fg:                           0
-URxvt*tabbar-bg:                        3
-URxvt*tabbar-fg:                        0
+URxvt*tab-bg:                           0
+URxvt*tab-fg:                           7
+URxvt*tabbar-bg:                        0
+URxvt*tabbar-fg:                        7
 URxvt*perl-ext-common:                  default,matcher,tabbed,vtwheel,fullscreen,clipboard
 URxvt*url-launcher:                     /usr/bin/firefox
 URxvt*matcher.button:                   1
