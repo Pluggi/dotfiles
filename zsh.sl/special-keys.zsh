@@ -25,6 +25,7 @@ key[PageDown]=${terminfo[knp]}
 [[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"   beginning-of-buffer-or-history
 [[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}" end-of-buffer-or-history
 
+bindkey '^R' history-incremental-search-backward
 bindkey '^[^[[D' emacs-backward-word
 bindkey '^[^[[C' emacs-forward-word
 
