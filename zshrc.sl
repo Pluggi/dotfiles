@@ -11,7 +11,7 @@ colors
 source ~/.zsh/git.zsh
 if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="yellow"; fi
 PROMPT="%{$fg[$NCOLOR]%}%n@%m:%~ ➤ %{$reset_color%}"
-RPROMPT='$(git_super_status)%{$fg[$NCOLOR]%}%p %D{%H:%M}%{$reset_color%}'
+RPROMPT='$(git_super_status)'
 
 # See http://geoff.greer.fm/lscolors/
 export LSCOLORS="exfxcxdxbxbxbxbxbxbxbx"
