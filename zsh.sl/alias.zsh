@@ -8,3 +8,7 @@ alias ocaml='rlwrap ocaml'
 
 alias ..='cd ..'
 alias ....='cd ../..'
+
+alias p='ping google.com'
+
+alias irc='ssh weechat@pluggi.fr -t "screen -x weechat"'
