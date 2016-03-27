@@ -15,6 +15,7 @@ general {
 }
 
 order += "disk /"
+order += "disk /home"
 order += "wireless wlp2s0"
 order += "ethernet enp3s0f1"
 order += "battery 0"
@@ -45,5 +46,9 @@ load {
 }
 
 disk "/" {
-        format = "%avail"
+        format = "/root: %avail"
+}
+
+disk "/home" {
+        format = "/home: %avail"
 }
