@@ -1,6 +1,7 @@
 # Global
 bin/
 obj/
+out/
 
 # Vim
 [._]*.s[a-w][a-z]
