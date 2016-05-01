@@ -12,3 +12,5 @@ alias ....='cd ../..'
 alias p='ping google.com'
 
 alias irc='mosh weechat@pluggi.fr'
+
+alias gdb='gdb -quiet'
