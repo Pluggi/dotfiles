@@ -1,13 +1,11 @@
 #!/bin/bash
 
-tmp="/tmp/screensaver-$(uuidgen)"
-src="$tmp/screen.png"
-dst="$tmp/out.png"
+dir="$(mktemp --directory /tmp/lock-sh-XXXXXX)"
+src="${dir}/src.png"
+dst="${dir}/dst.png"
 
-mkdir -p "$tmp"
 scrot "$src"
-convert "$src" -resize 5% -resize 2000% "$dst"
+convert "$src" -scale 5% -scale 2000% "$dst"
 i3lock -i "$dst" --ignore-empty-password --dpms --show-failed-attempts
 
-rm -rf "$tmp"
-
+rm -rf "$dir"
