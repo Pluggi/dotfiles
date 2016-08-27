@@ -15,5 +15,7 @@ alias irc='mosh weechat@pluggi.fr'
 
 alias gdb='gdb -quiet'
 
+alias sr='ssh -l root'
+
 alias yt-audio="youtube-dl -f bestaudio"
 alias yt-video="youtube-dl -f 'bestvideo+bestaudio/bestvideo+bestaudio'"
