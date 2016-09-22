@@ -9,7 +9,7 @@ alias ocaml='rlwrap ocaml'
 alias ..='cd ..'
 alias ....='cd ../..'
 
-alias p='ping google.com'
+alias p='_(){ ([[ $# -eq 0 ]] && ping google.com) || ping $1 }; _'
 
 alias irc='mosh weechat@pluggi.fr'
 
