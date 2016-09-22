@@ -16,6 +16,7 @@ alias irc='mosh weechat@pluggi.fr'
 alias gdb='gdb -quiet'
 
 alias sr='ssh -l root'
+alias root='sudo su'
 
 alias mkcd='_(){ mkdir $1; cd $1; }; _'
 alias cdtmp='cd $(mktemp -d)'
