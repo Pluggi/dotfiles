@@ -1,4 +1,5 @@
 alias l='ls -lh'
+alias la='ls -la'
 alias ls='ls --color=auto'
 alias tree='tree -sD --dirsfirst -C -A -h'
 alias hd='od -Ax -tx1z -v'
