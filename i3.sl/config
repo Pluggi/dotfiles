@@ -46,7 +46,7 @@ client.urgent                  #383a3b    #383a3b    #ee0000
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec urxvtcd
 
 # kill focused window
 bindsym $mod+F4 kill
