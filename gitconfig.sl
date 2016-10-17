@@ -12,7 +12,7 @@
     st = status
     ph = push
     pl = pull
-    cm = commit --verbose
+    cm = commit --verbose --signoff
     d  = diff
     dc = diff --cached
 
