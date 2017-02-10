@@ -54,3 +54,4 @@ URxvt*url-launcher:                     /usr/bin/firefox
 URxvt*matcher.button:                   1
 URxvt*colorUL:                          #4682B4
 URxvt*keysym.F11:                       perl:fullscreen:switch
+URxvt.saveLines: 100000

@@ -121,8 +121,8 @@ setopt correctall
 # History
 
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 
 # `histignoredups' prevents the current line from being saved in the history if
 # it is the same as the previous one
