@@ -38,7 +38,6 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
 ! URxvt settings
-URxvt*font: xft:Terminus:8
 URxvt*scrollBar:                        false
 URxvt*scrollTtyKeypress:                true
 URxvt*urgentOnBell:                     true
