@@ -1,33 +1,32 @@
-! Hybrid Terminal Colours. Uses the palette from Tomorrow-Night:
-! https://github.com/chriskempson/tomorrow-theme/blob/master/vim/colors/Tomorrow-Night.vim
-! vim: ft=xdefaults
+! terminal colours
+*foreground:#CCCCCC
+*background:#1B1D1E
 
-*background: #1D1F21
-*foreground: #C5C8C6
-! black
-*color0: #282A2E
-*color8: #373B41
-! red
-*color1: #A54242
-*color9: #CC6666
-! green
-*color2: #8C9440
-*color10: #B5BD68
-! yellow
-*color3: #DE935F
-*color11: #F0C674
-! blue
-*color4: #5F819D
-*color12: #81A2BE
-! magenta
-*color5: #85678F
-*color13: #B294BB
-! cyan
-*color6: #5E8D87
-*color14: #8ABEB7
-! white
-*color7: #707880
-*color15: #C5C8C6
+!black darkgray
+*color0:    #1B1D1E
+*color8:    #808080
+!darkred red
+*color1:    #FF0044
+*color9:    #F92672
+!darkgreen green
+*color2:    #82B414
+*color10:   #A6E22E
+!darkyellow yellow
+*color3:    #FD971F
+*color11:   #E6DB74
+!darkblue blue
+*color4:    #266C98
+*color12:   #7070F0
+!darkmagenta magenta
+*color5:    #AC0CB1
+*color13:   #D63AE1
+!darkcyan cyan
+*color6:    #AE81FF
+*color14:   #66D9EF
+!gray white
+*color7:    #CCCCCC
+*color15:   #F8F8F2
+
 
 Xft.dpi: 96
 Xft.antialias: true
@@ -44,8 +43,8 @@ URxvt*urgentOnBell:                     true
 URxvt*mouseWheelScrollPage:             true
 URxvt*cursorBlink:                      true
 URxvt*internalBorder:                   3
-URxvt*tab-bg:                           0
-URxvt*tab-fg:                           7
+URxvt*tab-bg:                           9
+URxvt*tab-fg:                           0
 URxvt*tabbar-bg:                        0
 URxvt*tabbar-fg:                        7
 URxvt*perl-ext-common:                  default,matcher,tabbed,vtwheel,fullscreen,clipboard
