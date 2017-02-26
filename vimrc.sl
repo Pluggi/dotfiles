@@ -115,6 +115,10 @@ set fillchars=vert:│
 " Enables syntax highlighting
 syntax on
 
+" Set colorscheme
+set background=light
+colorscheme molokai
+
 " Enable Doxygen highlighting
 let g:load_doxygen_syntax=1
 
