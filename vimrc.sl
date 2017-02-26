@@ -142,6 +142,9 @@ set cursorline
 hi CursorLine ctermfg=NONE cterm=bold term=bold ctermbg=235
 hi CursorLineNr ctermfg=NONE cterm=bold term=bold ctermbg=235
 
+" Set colors for visual selection
+hi Visual term=reverse cterm=reverse guibg=Grey
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Search options
 """"""""""""""""""""""""""""""""""""""""""""""""""
