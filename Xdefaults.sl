@@ -48,7 +48,6 @@ URxvt*tab-fg:                           0
 URxvt*tabbar-bg:                        0
 URxvt*tabbar-fg:                        7
 URxvt*perl-ext-common:                  default,matcher,tabbed,vtwheel,fullscreen,clipboard
-URxvt*url-launcher:                     /usr/bin/firefox
 URxvt*matcher.button:                   1
 URxvt*colorUL:                          #4682B4
 URxvt*keysym.F11:                       perl:fullscreen:switch
