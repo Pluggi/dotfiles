@@ -191,3 +191,9 @@ bar {
             urgent_workspace   #252525    #252525    #c7a551
    }
 }
+
+exec setxkbmap us -option 'compose:rctrl'
+exec numlockx
+exec urxvtd
+exec redshift-gtk
+exec $HOME/.autostart.sh
