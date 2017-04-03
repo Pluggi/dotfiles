@@ -14,6 +14,7 @@ Session.vim
 # Python
  __pycache__/
 *.py[cod]
+venv/
 
 # OCaml
 _build
