@@ -47,7 +47,7 @@ URxvt*tab-bg:                           9
 URxvt*tab-fg:                           0
 URxvt*tabbar-bg:                        0
 URxvt*tabbar-fg:                        7
-URxvt*perl-ext-common:                  default,matcher,tabbed,vtwheel,fullscreen,clipboard
+URxvt*perl-ext-common:                  default,matcher,tabbed,clipboard
 URxvt.url-launcher:                     /usr/bin/xdg-open
 URxvt*matcher.button:                   1
 URxvt*colorUL:                          #4682B4
