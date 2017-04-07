@@ -277,6 +277,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'chase/vim-ansible-yaml'
+Plugin 'lepture/vim-jinja'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
