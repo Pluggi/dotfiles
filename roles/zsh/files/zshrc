@@ -1,8 +1,3 @@
-# Load every configuration files in ~/.zsh
-for f in $HOME/.zsh/*.zsh; do
-    source $f
-done
-
 # Prompt
 
 function virtual_env_prompt () {
@@ -25,14 +20,39 @@ zstyle ':prompt:grml:*:items:host' token '%m:'
 # Use normal colors for user entry
 zstyle ':prompt:grml:right:items:percent' post '%F{normal}'
 
+
 # See http://geoff.greer.fm/lscolors/
 export LSCOLORS="exfxcxdxbxbxbxbxbxbxbx"
 export LS_COLORS="di=34;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=31;40:cd=31;40:su=31;40:sg=31;40:tw=31;40:ow=31;40:"
 export PATH="$PATH:$HOME/.local/bin:$HOME/.bin"
 
+
 # Make ^W break on those chars
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+
 
 # History
 HISTSIZE=10000
 SAVEHIST=10000
+
+
+# Aliases
+alias mv='mv -i -v'
+alias rm='rm -i -v'
+
+alias tree='tree -sD --dirsfirst -C -A -h'
+alias hd='od -Ax -tx1z -v'
+# Keep colors when piping
+alias less='less -r'
+
+alias p='_(){ ([[ $# -eq 0 ]] && ping google.com) || ping $1 }; _'
+
+alias irc='mosh weechat@pluggi.fr'
+
+alias gdb='gdb -quiet'
+
+alias sr='ssh -l root'
+alias root='sudo su'
+
+alias yt-audio="youtube-dl -f bestaudio"
+alias yt-video="youtube-dl -f 'bestvideo+bestaudio/bestvideo+bestaudio'"

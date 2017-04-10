@@ -1,0 +1,36 @@
+---
+
+- name: Install i3 and dependencies
+  package:
+    name: "{{ items }}"
+    state: latest
+  with_items:
+    - i3
+    - dunst
+  become: true
+
+- name: Create i3 config directory
+  file:
+    path: "{{ ansible_env.HOME }}/.i3"
+    state: directory
+
+- name: Copy i3 config
+  copy:
+    src: config
+    dest: "{{ ansible_env.HOME }}/.i3/config"
+
+- name: Copy i3py script
+  copy:
+    src: i3py.py
+    dest: "{{ ansible_env.HOME }}/.i3"
+
+- name: Install i3py requirements
+  pip:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - colour
+    - netifaces
+  become: true
+
+- include: urxvt.yml

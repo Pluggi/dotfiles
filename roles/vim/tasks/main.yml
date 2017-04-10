@@ -1,0 +1,31 @@
+---
+
+- name: Install vim
+  package:
+    name: vim
+    state: latest
+  become: true
+
+- name: Copy vimrc
+  copy:
+    src: vimrc
+    dest: "{{ ansible_env.HOME }}/.vimrc"
+
+- name: Copy syntastic config
+  copy:
+    src: syntastic_c_config
+    dest: "{{ ansible_env.HOME }}/.syntastic_c_config"
+
+- name: Create vim config directory
+  file:
+    path: "{{ ansible_env.HOME }}/.vim"
+    state: directory
+
+- name: Copy vim colors
+  copy:
+    src: colors/
+    dest: "{{ ansible_env.HOME }}/.vim/colors"
+
+- include: vundle.yml
+  static: no
+  when: vim_install_vundle

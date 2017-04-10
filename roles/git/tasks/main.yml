@@ -1,0 +1,22 @@
+---
+
+- name: Install git/tig
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - git
+    - tig
+  become: true
+
+- name: Copy git config
+  copy:
+    src: gitconfig
+    dest: "{{ ansible_env.HOME }}/.gitconfig"
+    mode: 0640
+
+- name: Copy global gitignore
+  copy:
+    src: gitignore
+    dest: "{{ ansible_env.HOME }}/.gitignore"
+    mode: 0640

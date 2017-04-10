@@ -1,0 +1,12 @@
+---
+
+- name: Install urxvt
+  package:
+    name: rxvt-unicode
+    state: latest
+  become: true
+
+- name: Copy Xdefaults
+  copy:
+    src: Xdefaults
+    dest: "{{ ansible_env.HOME }}/.Xdefaults"

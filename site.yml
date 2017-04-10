@@ -1,0 +1,17 @@
+---
+
+- hosts: all
+  roles:
+    - bins
+    - gdb
+    - git
+    - i3
+    - vim
+    - zsh
+  remote_user: pluggi
+
+  vars_prompt:
+    - name: "vim_install_vundle"
+      prompt: "vim: Install Vundle plugin manager?"
+      default: yes
+      private: no

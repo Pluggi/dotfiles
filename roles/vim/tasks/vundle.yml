@@ -1,0 +1,9 @@
+---
+
+- name: Clone Vundle
+  git:
+    repo: https://github.com/VundleVim/Vundle.vim.git
+    dest: "{{ ansible_env.HOME }}/.vim/bundle/Vundle.vim"
+
+- name: Install Vundle
+  command: vim +PluginInstall +qall

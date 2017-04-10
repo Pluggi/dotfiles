@@ -177,7 +177,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
-    status_command    python ~/dotfiles/i3py/i3py.py
+    status_command    python ~/.i3/i3py.py
     font pango:Terminus 11px
     position          bottom
     colors {
@@ -195,4 +195,5 @@ exec setxkbmap us -option 'compose:rctrl'
 exec numlockx
 exec urxvtd
 exec redshift-gtk
+exec dunst
 exec $HOME/.autostart.sh

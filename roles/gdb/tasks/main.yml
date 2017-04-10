@@ -1,0 +1,13 @@
+---
+
+- name: Install gdb
+  package:
+    name: gdb
+    state: latest
+  become: true
+
+- name: Copy gdb config
+  copy:
+    src: gdbinit
+    dest: "{{ ansible_env.HOME }}/.gdbinit"
+    mode: 0640

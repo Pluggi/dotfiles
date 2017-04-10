@@ -1,0 +1,9 @@
+---
+
+- name: Copy bin files
+  copy:
+    src: "{{ item }}"
+    dest: "{{ ansible_env.HOME }}/.local/bin"
+    mode: 0750
+  with_fileglob:
+    - "{{ role_path }}/files/*"

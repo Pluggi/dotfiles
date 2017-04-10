@@ -1,0 +1,4 @@
+* Template i3 config to enable/disable pyi3status
+* Template vim to enable/disable Vundle plugins
+* Global prompt to install everything
+  * One prompt for each thing to install separately

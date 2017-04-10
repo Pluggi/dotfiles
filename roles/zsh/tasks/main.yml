@@ -1,0 +1,15 @@
+---
+
+- name: Install zsh and grml-zsh-config
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - zsh
+    - grml-zsh-config
+  become: true
+
+- name: Copy zsh custom configuration
+  copy:
+    src: zshrc
+    dest: "{{ ansible_env.HOME }}/.zshrc"
